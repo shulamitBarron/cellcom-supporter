@@ -1,0 +1,35 @@
+﻿<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>customerDetails</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <b>Customer-details</b>
+    </ion-card-header>
+    <ion-card-content>     
+      <ion-item>
+        <ion-label>firstName</ion-label>
+        <ion-label type="text" name="name">{{customer.name}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>e-mail</ion-label>
+        <ion-label type="email" name="email">{{customer.email}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>phone</ion-label>
+        <ion-label type="text" name="phone">{{customer.phone}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>address</ion-label>
+        <ion-label type="text" name="address">{{customer.address}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

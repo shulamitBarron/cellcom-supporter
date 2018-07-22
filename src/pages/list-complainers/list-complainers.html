@@ -1,0 +1,37 @@
+﻿<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>listComplainers</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="compliners.length">
+    <ion-card-header>
+      Messages:
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item ion-item *ngFor="let complainer of compliners">
+          <ion-row>
+            <ion-col width-50>{{complainer.name}} </ion-col>
+            <ion-col width-20>{{complainer.dateTime| date:'HH:mm'}} </ion-col>
+            <ion-col width-30>
+              {{complainer.dateTime| date: 'dd/MM/yyyy'}}
+            </ion-col>
+          </ion-row>
+        </ion-item>
+        <button full ion-button  (click)="getChat()" outline>
+          <b>receive a call </b>
+          <ion-icon name="ios-chatbubbles-outline" item-end>
+          </ion-icon>
+        </button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-label *ngIf="!compliners.length">
+    No Customers 
+  </ion-label>
+</ion-content>

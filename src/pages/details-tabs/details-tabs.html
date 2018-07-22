@@ -1,0 +1,13 @@
+﻿<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Personal Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-tabs>
+  <ion-tab [root]="showDetail" tabTitle="show detail" tabIcon="contact"></ion-tab>
+  <ion-tab [root]="editDetail" tabTitle="edit detail" tabIcon="create"></ion-tab>
+</ion-tabs>

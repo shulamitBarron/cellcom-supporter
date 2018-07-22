@@ -1,0 +1,19 @@
+﻿<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List all Customers</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>   
+      <ion-searchbar [(ngModel)]="searchTerm"></ion-searchbar>
+      <ion-list padding>
+        <button ion-item *ngFor="let customer of customers" (click)="customerDetails(customer)">
+          <ion-row>
+            <ion-col *ngIf="setFilteredCustomers(customer.name)" width-50>{{customer.name}}</ion-col>
+          </ion-row>
+        </button>
+      </ion-list>
+</ion-content>
